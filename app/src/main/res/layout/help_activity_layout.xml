@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Cómo solucionar problemas con apps de Android que no funcionan
+Si una app en tu dispositivo Android se bloquea, no abre, no responde o no funciona correctamente, prueba los siguientes pasos para solucionar problemas. Después de implementar cada uno de ellos, verifica si se resolvió tu problema.
+
+Si una app de Google que vino incluida en tu dispositivo tiene problemas, es posible que los ocasione otra app que descargaste después.
+
+Sugerencia: Si la app que no funciona es una app instantánea, prueba estos pasos para solucionar problemas.
+
+Nota: Algunos de estos pasos solo funcionan en Android 8.1 y versiones posteriores. Obtén más información sobre cómo comprobar qué versión de Android usas.
+Paso 1: Reinicia y actualiza
+Reinicia el dispositivo
+
+
+Comprueba si hay actualizaciones de Android
+
+
+Actualiza la app
+
+
+Paso 2: Comprueba que no haya un problema más serio con la app
+Fuerza la detención de la app
+
+
+
+Borra la caché de la app
+
+
+
+Borra los datos de la app
+
+
+
+
+Comunícate con el programador de la app
+
+Desinstala una app"/>
+</LinearLayout>

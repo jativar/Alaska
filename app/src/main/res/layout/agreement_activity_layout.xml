@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="CONTRATO DE LICENCIA DE APLICACIÓN PARA MÓVIL DE SIE Inc. (Versión 2.0)
+
+
+LEA ESTE CONTRATO DE LICENCIA DE APLICACIÓN PARA MÓVIL DE SIE Inc. («CONTRATO») DETENIDAMENTE PARA COMPRENDER SUS DERECHOS Y OBLIGACIONES.
+
+ESTE ES UN CONTRATO ENTRE USTED Y SONY INTERACTIVE ENTERTAINMENT INC. («SIE Inc.»).  EL ACCESO O USO DEL SOFTWARE DE APLICACIÓN DISTRIBUIDO POR SIE Inc. PARA USAR EN DISPOSITIVOS ANDROID O IOS («SOFTWARE DE APLICACIÓN») ESTÁ EXPRESAMENTE CONDICIONADO A LA ACEPTACIÓN DE LOS TÉRMINOS DE ESTE CONTRATO.  AL UTILIZAR EL SOFTWARE DE APLICACIÓN, USTED DECLARA QUE ES APTO PARA FIRMAR UN CONTRATO SEGÚN LAS LEYES DE SU JURISDICCIÓN Y ACEPTA RESPETAR LOS TÉRMINOS DE ESTE CONTRATO.
+
+Usted acepta este Contrato en su nombre y en nombre de otras personas que accedan o usen: (i) el Software de aplicación en el dispositivo que posea o controle y que ejecute legalmente la versión aplicable de iOS o Android OS («dispositivo»); o (ii) su cuenta de Sony Entertainment Network con el Software de aplicación.  Usted es responsable del uso de su Software de aplicación por parte de otras personas y de su cumplimiento de los términos de este Contrato.
+
+Este Contrato se aplica a cualquier al Software de aplicación y a los parches, actualizaciones, mejoras o nuevas versiones del mismo.
+
+NOTA: SI ES RESIDENTE DE LOS ESTADOS UNIDOS O DE UN PAÍS DE AMÉRCIA DEL NORTE, CENTRAL O DEL SUR, HASTA EL ÁMBITO PERMITIDO POR LA LEY, ESTE CONTRATO CONTIENE UNA ARBITRAJE INDIVIDUAL VINCULANTE Y UNA DISPOSICIÓN DE RENUNCIA A DEMANDA COLECTIVA EN LA SECCIÓN 9 QUE AFECTA A SUS DERECHOS BAJO ESTE CONTRATO Y CON RESPECTO A CUALQUIER «DISPUTA» (COMO SE DEFINE EN LA SECCIÓN 9) ENTRE USTED Y UNA «ENTIDAD SONY» (COMO SE DEFINE EN LA SECCIÓN 9).  TIENE DERECHO DE RENUNCIA A LAS DISPOSICIONES VINCULANTES DE ARBITRAJE INDIVIDUAL Y DE RENUNCIA A DEMANDA COLECTIVA TAL Y COMO SE DESCRIBE EN LA SECCIÓN 9." />
+</LinearLayout>

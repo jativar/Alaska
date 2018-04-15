@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    In order to use the SeekArc library, add the following three lines to
+    the manifest tag:
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:versionCode="1"
+    android:versionName="1.0"
+
+    then, add the following line to the application tag:
+
+    tools:replace="icon, label"
+
+    Doing this, will sove the issue reported at compilation time connected to the
+    message Suggestion: add 'tools:replace="android:icon' to <application> element at
+    AndroidManifest.xml:40:5 to override
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jativa.ramiro.alaska"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <application
+        tools:replace="icon, label"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".AgreementActivity"/>
+        <activity android:name=".ContactTelephoneActivity"/>
+        <activity android:name=".CopyrightActivity"/>
+        <activity android:name=".HelpActivity"/>
+        <activity android:name=".LoginActivity"/>
+
+    </application>
+
+</manifest>

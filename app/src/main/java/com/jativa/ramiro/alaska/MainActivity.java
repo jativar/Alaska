@@ -65,9 +65,14 @@ public class MainActivity extends AppCompatActivity {
 
                             Toast.makeText(MainActivity.this, "Agreement Activity" , Toast.LENGTH_SHORT).show();
 
-                            Intent waterfilter = new Intent(MainActivity.this, AgreementActivity.class);
+                            //Intent waterfilter = new Intent(MainActivity.this, AgreementActivity.class);
+
+                            //startActivity(waterfilter);
+
+                            Intent waterfilter = new Intent(MainActivity.this, MapsActivity.class);
 
                             startActivity(waterfilter);
+
 
                         };
 

@@ -22,6 +22,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    // WE USE AN EMULATOR FOR ANDROID THAT MUST HAVE AT LEAST PLAY-SERVICES-MAPS VERSION 9.0.0
+    // IF WE USE THE VERSION 15.0.0 FOR GOOGLE PLAY-SERVICES-MAPS. THE ALASKA APP WON'T WORK
+    // WITH THE EMULATOR!
+    implementation 'com.google.android.gms:play-services-maps:9.0.0' //15.0.0
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'

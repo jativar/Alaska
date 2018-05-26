@@ -31,8 +31,9 @@
             android:gravity="center_horizontal|center_vertical"
             android:onClick="display_normal_type_map"
             android:text="NORMAL"
+            android:tooltipText="display normal type map"
             android:textColor="@android:color/background_light"
-            android:buttonTint="@android:color/background_light"/>
+            android:buttonTint="@android:color/background_light" />
 
         <View
             android:id="@+id/VerticalLine1"
@@ -86,5 +87,19 @@
             android:buttonTint="@android:color/background_light"/>
 
     </RadioGroup>
+
+    <!--
+     The code included into the <ScrollView tag, is the code
+     needed to implement the Control and Gestures in Android > Maps SDK for Android
+     the url link for Control and Gestures is:
+     https://developers.google.com/maps/documentation/android-sdk/controls
+
+     Using the Maps SDK for Android, you can customize the way in which users
+     can interact with your map, by determining which of the build in UI
+     components appear on the map and which gestures are allowed.
+    -->
+
+
+
 </FrameLayout>
 

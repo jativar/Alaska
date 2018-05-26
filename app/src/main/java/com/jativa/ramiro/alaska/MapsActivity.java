@@ -2,18 +2,18 @@ package com.jativa.ramiro.alaska;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import android.widget.CheckBox;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -21,15 +21,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static final LatLng PERTH = new LatLng(-31.952854, 115.857342);
     private static final LatLng SYDNEY = new LatLng(-33.87365, 151.20689);
     private static final LatLng BRISBANE = new LatLng(-27.47093, 153.0235);
-
+    private static final int MY_LOCATION_PERMISSION_REQUEST_CODE = 1;
+    private static final int LOCATION_LAYER_PERMISSION_REQUEST_CODE = 2;
     private GoogleMap mMap;
-
-
+    private UiSettings mUiSettings; // DECLARED BUT NOT USED YET!!!
+    private CheckBox mMyLocationButtonCheckbox;
+    private CheckBox mMyLocationLayerCheckbox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -37,6 +41,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     }
+
+
 
 
     /*
@@ -78,6 +84,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
 
     public void display_normal_type_map (View v) {
+        /*
+        For future implementation of popup messages.  Such as
+        button.setTooltipText().
+        Call to setTooltipText requires API level 26!
+        The API level 26 declaration can be found
+        at build.gradle (Module: app) update
+        minSdkVersion 15 to minSdkVersion 26
+
+        The following code, requires API Level 26 and
+        also Device Emulator using API level 26:
+
+
+        "RadioButton rb = (RadioButton) findViewById(R.id.radioNORMAL);
+        rb.setTooltipText("Normal Map");"
+
+        When I have device emulator with API Level 26, then I can include
+        the code above.
+
+        More information at:
+        https://developer.android.com/guide/topics/ui/tooltips
+
+        */
+
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
     }
@@ -98,6 +127,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     /**
+     * Returns whether the checkbox with the given id is checked.
+     */
+    private boolean isChecked(int id) {
+        return ((CheckBox) findViewById(id)).isChecked();
+    }
+
+    /**
      * Called when the map is ready.
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -111,6 +147,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+
+
+
         // Date: Sun 29 Apr 2018
         // Purpose: Add some markers to the map, and add a data object to each marker
 
@@ -123,6 +162,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .snippet("Population: 5 Million People.")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
+        // Display on the map the '+' and '-' Zoom Control
+        // by using the call getUiSettings()
+        mMap.getUiSettings().setZoomControlsEnabled(true);
 
         // Add a marker in Brisbane and move the camera
         LatLng perth = PERTH;
@@ -167,6 +210,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
          */
     }
 
-
-
 }
+
+
+
+
+
+
